@@ -24,8 +24,8 @@
   </head>
   <body>
   <div class="container">
-    
-    <h1>Lagos, Nigeria.</h1>
+    <div class="weather-app">
+
      <form id="search-form">  
         <div class="row search">
             <div class="col-sm-9">
@@ -48,27 +48,31 @@
               </div>  
               </div>  
         </form>
-        <h2 id="city"> Ikeja</h2>
-          <h3 id="date"></h3>  
+        <h1 id="city"> Lagos</h1>
+        <ul>
+        <li id="date"></li>
+        <li id="description">
+          Clear
+        </li>
+        </ul>
       <div class="row">
       <div class="col col-6">
-      <h4  class="currentTemperature" id="currentTemperature"> <i class="fa-solid fa-cloud cloud-icon" ></i>
+        <img src="https://ssl.gstatic.com/onebox/weather/64/rain.png" alt="rain"/>
+      <h2  class="currentTemperature" id="currentTemperature"> 
         34°C
-    </h4>
-            <em id="description"></em>
-           
+    </h2>
           </div>
-          </div> 
-                  <p>
-                  <ul>
+          <div class="col col-6">
+             <ul>
                     <li>Precitipation: 20%</li>
                     <li>Wind: <span id="wind"></span>Km/h</li>
                     <li>Humidity: <span id="humidity"></span>%</li>
                   </ul>
-                </p>
-                 
+          </div>
+          </div> 
+          </div>       
 <small>
-      <a href="https://github.com/dheroju/WeatherApp-Project" target="_blank">Open-source code</a>
+      <a href="https://github.com/dheroju/Vanilla-Weather-App" target="_blank">Open-source code</a>
     , by Aderoju Johnson
 </small>
 </div>
