@@ -1,27 +1,25 @@
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "PT Mono", monospace;
+  background: #ffffff;
 }
 
 h1 {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 24px;
   font-weight: 100;
-  line-height: 28px;
+  line-height: 48px;
   margin-bottom: 0;
-}
-
-h2 {
-  font-weight: normal;
-  font-size: 18px;
 }
 
 small {
   font-size: 15px;
   text-align: center;
-  font-family: "PT Mono", monospace;
 }
+
 li {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
   font-size: 18px;
   font-weight: 300;
   line-height: 19px;
@@ -31,12 +29,7 @@ ul {
   margin: 0;
   padding: 0;
 }
-.container {
-  border-radius: 4px;
-  background: linear-gradient(to top, #5585b5 7%, white 93%);
-  max-width: 600px;
-  margin: 20;
-}
+
 .Enteracity {
   position: relative;
   top: -31px;
@@ -53,19 +46,36 @@ ul {
   left: 100px;
 }
 .search-form {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
-.weather-app {
+
+.weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
+}
+.weather-app {
   padding: 20px;
-  border: 1px solid #5585b5;
-  border-radius: 5px;
+  border: 1px solid navy;
+  border-radius: 10px;
+}
+
+.overview {
+  margin-bottom: 20px;
+}
+.weather-tempreature img {
+  margin-right: 10px;
+  height: 64px;
+  width: 64px;
 }
 .currentTemperature {
-  font-size: 40px;
-  position: relative;
-  top: 10px;
-  left: 50px;
+  font-size: 64px;
   line-height: 1;
+  font-weight: 400;
+}
+.container {
+  color: #fff;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 6px;
+  background-image: url(https://assets.msn.com/weathermapdata/1/static/background/v2.0/compactads3/Clear%20Night.png);
 }
