@@ -25,6 +25,10 @@ li {
   line-height: 19px;
 }
 
+li.firstletter {
+  text-transform: capitalize;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -78,11 +82,8 @@ ul {
 .weather-temperature .unit {
   position: relative;
   font-size: 16px;
-  top: -50px;
+  top: -34px;
 }
 .container {
   color: #fff;
-  max-width: 600px;
-  margin: 40px auto;
-  border-radius: 6px;
 }
