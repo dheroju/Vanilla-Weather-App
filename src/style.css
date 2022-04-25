@@ -4,16 +4,15 @@ body {
 }
 
 h1 {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 24px;
-  font-weight: 100;
-  line-height: 48px;
+  line-height: 28px;
   margin-bottom: 0;
 }
 
 small {
   font-size: 15px;
-  text-align: center;
+  color: #000;
 }
 
 li {
@@ -25,13 +24,17 @@ li {
   line-height: 19px;
 }
 
-li.firstletter {
+li {
   text-transform: capitalize;
 }
 
 ul {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .Enteracity {
@@ -49,25 +52,23 @@ ul {
   top: 30px;
   left: 100px;
 }
-.search-form {
-  margin-bottom: 30px;
-}
 
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
-  background-image: url(https://assets.msn.com/weathermapdata/1/static/background/v2.0/compactads3/Clear%20Night.png);
 }
 .weather-app {
+  max-width: 600px;
   padding: 20px;
-  border: 1px solid navy;
-  border-radius: 10px;
+  border-radius: 1px solid #000;
+  border-radius: 5px;
+  background-image: url(https://assets.msn.com/weathermapdata/1/static/background/v2.0/compactads3/Clear%20Night.png);
 }
 
 .overview {
   margin-bottom: 20px;
 }
-.weather-tempreature img {
+.weather-temperature img {
   margin-right: 5px;
   height: 64px;
   width: 64px;
@@ -78,12 +79,13 @@ ul {
   line-height: 1;
   font-weight: 400;
 }
-
-.weather-temperature .unit {
+.units {
   position: relative;
   font-size: 16px;
   top: -34px;
 }
 .container {
   color: #fff;
+  max-width: 600px;
+  margin: 30px auto;
 }
