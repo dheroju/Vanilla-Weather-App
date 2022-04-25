@@ -89,3 +89,12 @@ a {
   max-width: 600px;
   margin: 30px auto;
 }
+
+.weather-temperature .active {
+  color: wheat;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}

@@ -30,21 +30,57 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
-  cityElement.innerHTML = response.data.main.name;
+
+  celsiusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
+  console.log(humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  iconElement.setAttribute(response.data.weather[0].description);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "4eb6daa3756f86904454c49ea5eab81e";
-let city = "Lagos";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function searchCity(city) {
+  let apiKey = "4eb6daa3756f86904454c49ea5eab81e";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  searchCity(cityInputElement.value);
+}
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#currentTemperature");
+  let fahrenheitTemperature = ((celsiusTemperature * 9) / 5) * 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#currentTemperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+searchCity("Lagos");
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
