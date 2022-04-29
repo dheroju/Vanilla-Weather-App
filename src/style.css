@@ -1,6 +1,8 @@
 body {
   font-family: "PT Mono", monospace;
   background: #ffffff;
+  background-image: url("../media/hasselmann.jpg");
+  background-size: cover;
 }
 
 h1 {
@@ -99,8 +101,11 @@ a {
   text-decoration: none;
 }
 .weather-forecast {
+  color: blue;
   margin-top: 20px;
   text-align: center;
+  background-color: #fff;
+  position: relative;
 }
 
 .weather-forecast-date {
